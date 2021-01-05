@@ -1,0 +1,9 @@
+[package]
+name = "PurpleDusk"
+version = "0.1.0"
+authors = ["ezer1025 <enoshzerahia@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
