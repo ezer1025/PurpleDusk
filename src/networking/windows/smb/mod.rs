@@ -1,8 +1,9 @@
 extern crate guid;  
 use guid::GUID; 
+use crate::networking::windows::UnicodeString;
 
 // SMB2 Header command field options    
-pub const SMB_COMMAND_SMB2_NEGOTIATE:               u16 = 0x0000;
+pub const SMB_COMMAND_SMB2_NEGOTIATE:                   u16 = 0x0000;
 pub const SMB_COMMAND_SMB2_SESSION_SETUP:               u16 = 0x0001;
 pub const SMB_COMMAND_SMB2_LOGOFF:                      u16 = 0x0002;
 pub const SMB_COMMAND_SMB2_TREE_CONNECT:                u16 = 0x0003;
@@ -120,12 +121,6 @@ enum SMB2NegotiateRequestClientStartTime {
     DialectNot0x0311: {
         client_start_time: u64
     }
-}
-
-pub struct UnicodeString {
-    data_length: u16,
-    reserved: u32,
-    string: Vec<u16>
 }
 
 pub struct SMB2Header {
